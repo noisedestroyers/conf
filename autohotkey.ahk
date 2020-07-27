@@ -42,20 +42,20 @@ SendInput 810 772 0414
 Return
 
 ; DateTime Stamp:
-Capslock & t::
-FormatTime, CurrentDateTime,, yyyy-MM-dd HH:mm:ss
-SendInput %CurrentDateTime%
+Capslock & t::RunOrActivate("wt", "Windows Terminal")
+;FormatTime, CurrentDateTime,, yyyy-MM-dd HH:mm:ss
+;SendInput %CurrentDateTime%
 Return
 
 ; Enable VPN to DTS
 Capslock & v::
-Run, C:\Program Files\Dell SonicWALL\Global VPN Client\SWGVC.exe -e "DTS-MI",,hide
+Run, C:\Program Files\Dell SonicWALL\Global VPN Client\SWGVC.exe -e "mobile.dtsweb.com",,hide
 ;ToolTip, Enable VPN
 Return
 
 ; Disable VPN to DTS
 Capslock & b::
-Run, C:\Program Files\Dell SonicWALL\Global VPN Client\SWGVC.exe -d "DTS-MI",,hide
+Run, C:\Program Files\Dell SonicWALL\Global VPN Client\SWGVC.exe -d "mobile.dtsweb.com",,hide
 ;ToolTip, Disable VPN
 Return
 
@@ -80,7 +80,7 @@ Return
 Capslock & w::RunOrActivate("C:\Program Files\Mozilla Firefox\Firefox.exe", "Firefox")
 
 ; Focus Skype
-Capslock & s::RunOrActivate("shell:appsfolder\Microsoft.SkypeApp_kzf8qxf38zg5c!App", "Skype")
+Capslock & s::RunOrActivate("C:\Program Files (x86)\Microsoft\Skype for Desktop\Skype.exe", "Skype")
 
 ; Focus ConEmu
 Capslock & c::^`
