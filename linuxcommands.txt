@@ -1,0 +1,5 @@
+# drive use
+sudo du -h --max-depth=1
+
+# docker cleanup
+docker system prune --all --volumes --force
